@@ -1,6 +1,13 @@
 Devise LDAP Authenticatable
 ===========================
 
+Custom Fork of devise_ldap_authenticatable that restores the net_ldap 0.1.1 dependency (i.e. removes the 0.2.2 requirement) 0.2.2 was giving me a:
+
+  Net::BER::BerError in Devise::SessionsController#create
+  Unsupported object type: id=139
+
+Exception during authentication. Unless you get the same exception you're best off using the official cschiewek version!
+
 Devise LDAP Authenticatable is a LDAP based authentication strategy for the [Devise](http://github.com/plataformatec/devise) authentication framework.
 
 If you are building applications for use within your organization which require authentication and you want to use LDAP, this plugin is for you.
@@ -20,7 +27,7 @@ Requirements
 These gems are dependencies of the gem:
 
 - Devise ~> 1.4.0 
-- net-ldap ~> 0.2.2
+- net-ldap ~> 0.1.1
 
 Installation
 ------------
